@@ -21,6 +21,10 @@ COPY mix.exs mix.lock package.json package-lock.json ./
 RUN mix deps.get && \
     npm install
 
+COPY . .
+
+RUN npm run deploy
+
 EXPOSE 4000
 
 CMD [ "mix", "phoenix.server" ]
