@@ -1,0 +1,6 @@
+# Ignore all kind of dockerfiles
+Dockerfile*
+docker-compose*.yml
+
+# Ignore env files (all env variables, must be passed through the compose file)
+.env*
