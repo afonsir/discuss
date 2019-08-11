@@ -9,7 +9,7 @@ RUN mkdir -p /app
 WORKDIR /app
 
 RUN apk update && \
-    apk add nodejs npm && \
+    apk add inotify-tools nodejs npm && \
     rm -rf /var/cache/apk/*
 
 RUN mix archive.install --force $PHOENIX_URL && \
