@@ -10,6 +10,8 @@ volumes:
 
 services:
   phoenix:
+    depends_on:
+    - postgres
     image: afonsir/phoenix:1.2.5-alpine
     build: .
     environment:
